@@ -2,9 +2,68 @@
 <html>
     <head>
         <title>Contact Page</title>
+
+        <link href="style.css" rel="stylesheet">
     </head>
 
     <body>
         <h1>Contact Page</h1>
+
+        <form>
+            <p>
+                <label>First Name</label> <br>
+                <input type="text" name="firstname" required>
+            </p>
+            <p>
+                <label>Last Name</label> <br>
+                <input type="text" name="lastname" placeholder="Enter your last name">
+            </p>
+            <p>
+                <label>Email</label> <br>
+                <input type="email" name="email" placeholder="email@yahoo.com">
+            </p>
+            <p>
+                <label>Age</label> <br>
+                <input type="number" name="lastname">
+            </p>
+            <p>
+                <label>Gender</label> <br>
+                <select name="gender">
+                    <option>Female</option>
+                    <option>Male</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Gender</label> <br>
+                <input type="radio" name="gender_radio" value="female"> Female <br>
+                <input type="radio" name="gender_radio" value="male">Male <br>
+            </p>
+
+            <p>
+                <label>Hobbies</label> <br>
+                <input type="checkbox" name="hobbies" value="jumping"> Jumping <br>
+                <input type="checkbox" name="hobbies" value="singing"> Singing <br>
+                <input type="checkbox" name="hobbies" value="dancing"> Dancing <br>
+                <input type="checkbox" name="hobbies" value="running"> Running <br>
+            </p>
+
+            <p>
+                <label>Hobbies</label> <br>
+                <select name="hobbies_select" multiple>
+                    <option>Jumping</option>
+                    <option>Singing</option>
+                    <option>Dancing</option>
+                    <option>Running</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Password</label> <br>
+                <input type="password" name="password">
+            </p>
+
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>
