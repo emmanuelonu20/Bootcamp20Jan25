@@ -3,6 +3,10 @@
     <head>
         <title>My first web page</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap" rel="stylesheet">
+
         <link href="style.css" rel="stylesheet">
 
         <style>
@@ -23,19 +27,21 @@
     </head>
 
     <body>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_witZQP25sg?si=T92341F_eYERGxsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         <!-- Heading tag -->
         <h1>Hello World</h1>
         <h2>Hello World</h2>
         <h3>Hello World</h3>
-        <h4>Hello World</h4>
+        <h4 class="content">Hello World</h4>
         <h5>Hello World</h5>
         <h6>Hello World</h6>
         
 
         <!-- Paragraph and line break-->
-        <p>Welcome to Robogarden Bootcamp. <br> This will be interesting.</p>
+        <p class="content">Welcome to Robogarden Bootcamp. <br> This will be interesting.</p>
 
-        <p>Trump won the US election and Canada is in trouble.</p>
+        <p class="content" id="summary">Trump won the US election and Canada is in trouble.</p>
 
         <!-- Div and Span -->
         <div>My like <span style="color: red; font-size: 30px">football</span>.</div>
@@ -61,8 +67,10 @@
         <!-- Image -->
         <img src="https://smartcdn.gprod.postmedia.digital/calgaryherald/wp-content/uploads/2018/06/tower-3.jpg" width="250">
 
+        <br>
+
         <a href="https://calgary.ca" title="Welcome to calgary">
-            <img src="peacebridge.jpg" width="400">
+            <img src="peacebridge.jpg" width="400" id="bridgeimage">
         </a>
 
         <!-- Anchor -->

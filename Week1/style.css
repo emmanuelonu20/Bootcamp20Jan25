@@ -1,7 +1,27 @@
 body {
-    background-color: lightgreen;
+    background-color: rgb(142, 196, 227);
+    font-family: "Sedan SC", serif;
 }
 
 h1 {
     text-decoration: underline;
+}
+
+#summary {
+    font-weight: bold;
+    color: #21714c;
+    font-size: 40px;
+}
+
+.content{
+    background-color: lightsalmon;
+    font-style: italic;
+}
+
+#bridgeimage {
+    width: 200px;
+}
+
+#bridgeimage:hover {
+    width: 300px;
 }
