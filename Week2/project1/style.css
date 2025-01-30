@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", serif;
+    background-color: #f6f6f6;
+}
+
+#header_section {
+    background-color: #318d3f;
+    color: #fff;
+    padding: 15px 0;
+}
+
+#site_name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.nav li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.nav li a.active, .nav li a:hover{
+    background-color: #1b7228;
+}
+
+.place-order {
+    float: right;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.food-item{
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.food-text{
+    padding: 15px;
+}
+
+.food-text h4, .food-text p{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: #0d6efd;
+    font-size: 15px;
+}
+
+.btn-dislike {
+    background-color: #e83131;
+}
+
+.btn i{
+    font-size: 22px;
+}
+
+#content_section {
+    margin-top: 30px;
+}
+
+#footer_section{
+    background-color: #318d3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
