@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="text1" class="content">Hello World</div>
+    <div class="content">Hello World 1</div>
+    <div class="content">Hello World 2</div>
+
+    <form>
+        <p>
+            <label>Name</label> <br>
+            <input type="text" name="full_name" id="full_name">
+        </p>
+        <p>
+            <label>Age</label> <br>
+            <input type="number" name="age" id="age">
+        </p>
+        <p>
+            <label>Email</label> <br>
+            <input type="email" name="email" id="email">
+        </p>
+        <button type="button" onclick="validate_form()">Submit</button>
+    </form>
+
+    <script>
+        //GetElementById
+        const text1Dom = document.getElementById('text1');
+        text1Dom.innerHTML = '<h1>I am something else</h1>';
+        text1Dom.style.backgroundColor = 'yellow';
+
+        //GetElementByClassName
+        const contentDoms = document.getElementsByClassName('content');
+        console.log(contentDoms.length); //3
+        for (let dom of contentDoms) {
+            dom.style.color = 'red';
+        }
+
+        function validate_form(){
+            const name = document.getElementById('full_name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+
+            console.log(name, age, email);
+
+            if (name === '') {
+                alert('Name field is missing');
+                return;
+            }
+
+            if (age === '') {
+                alert('Age field is missing');
+                return;
+            }
+
+            if (email === '') {
+                alert('email field is missing');
+                return;
+            }
+
+            if (age < 18) {
+                alert('Sorry, you are too young');
+                return;
+            }
+        }
+    </script>
+    
+</body>
+</html>

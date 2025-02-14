@@ -61,4 +61,5 @@ let student2 = new Student("Ben Ken", 33, "Mathematics");
 let student3 = new Student("John Smith", 12, "Geology");
 let student4 = new Student("Peter Pan", 78, "Music");
 
-console.log(student2.name);
+console.log(student2.name); //Ben Ken
+console.log(student2.department); //Mathematics

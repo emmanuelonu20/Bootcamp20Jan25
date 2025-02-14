@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#text1").html("<h1>I am something else</h1>").css("background-color", "yellow");
+
+        $(".content").css("color", "red");
+      });
+
+      function validate_form(){
+        const name = $('#full_name').val();
+        const age = $('#age').val();
+        const email = $('#email').val();
+
+        //debugger;
+
+        abc();
+
+        console.log(name, age, email);
+       
+
+        if (name === '') {
+            alert('Name field is missing');
+            return;
+        }
+
+        if (age === '') {
+            alert('Age field is missing');
+            return;
+        }
+
+        if (email === '') {
+            alert('email field is missing');
+            return;
+        }
+
+        if (age < 18) {
+            alert('Sorry, you are too young');
+            return;
+        }
+      }
+
+      function abc(){
+        for(let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="text1" class="content">Hello World</div>
+    <div class="content">Hello World 1</div>
+    <div class="content">Hello World 2</div>
+
+    <form>
+      <p>
+        <label>Name</label> <br />
+        <input type="text" name="full_name" id="full_name" />
+      </p>
+      <p>
+        <label>Age</label> <br />
+        <input type="number" name="age" id="age" />
+      </p>
+      <p>
+        <label>Email</label> <br />
+        <input type="email" name="email" id="email" />
+      </p>
+      <button type="button" onclick="validate_form()">Submit</button>
+    </form>
+  </body>
+</html>
