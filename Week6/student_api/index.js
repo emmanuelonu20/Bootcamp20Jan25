@@ -31,7 +31,7 @@ app.get('/students', function(req, res){
         }
     }
 
-    res.status(200).send(student_data);
+    res.status(200).send(student_data);``
 });
 
 //Get a single student
