@@ -1,0 +1,31 @@
+<h1>Welcome to our hospital</h1>
+
+<p>The total number of doctors and patients is {{ doctors.length + patients.length }}</p>
+
+<h2>Doctors</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+    </tr>
+
+    <tr *ngFor="let doctor of doctors">
+        <td>{{ doctor.name }}</td>
+        <td>{{ doctor.specialization }}</td>
+    </tr>
+</table>
+
+<h2>Patients</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Illness</th>
+    </tr>
+
+    <tr *ngFor="let patient of patients">
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.illness }}</td>
+    </tr>
+</table>

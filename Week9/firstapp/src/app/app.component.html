@@ -1,0 +1,75 @@
+<h1>{{ title }}</h1>
+
+<h1>{{ name }}</h1>
+
+<app-students></app-students>
+
+<app-teachers></app-teachers>
+
+<ul>
+    <li *ngFor="let name of studentNames">{{ name }}</li>
+</ul>
+
+<!-- Property data binding -->
+ <img [src]="imageUrl" width="200">
+
+ <!-- Event data binding -->
+  <br><br>
+ <button type="button" (click)="showTowerImage()">Calgary Tower</button>  
+ <button type="button" (click)="showPeaceBridge()">Calgary Peace Bridge</button>
+
+ <!-- Attribute data binding -->
+ <table>
+    <tr>
+        <td>1</td>
+        <td [attr.colspan]="numColSpan">2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+</table>
+
+<!-- Class binding -->
+<div [class]="blueClass">Hello from the other side</div>
+
+<!-- Style binding -->
+<div [style.background-color]="bgColor">Hello again from the other side</div>
+
+<!-- Two-way binding -->
+ <input type="text" [(ngModel)]="name"> {{ name }}
+
+ <!-- Directives -->
+
+ <!-- ngClass -->
+ <div [ngClass]="{'blue-bg': !hasError, 'red-bg': hasError}">Another text</div>
+
+ <!-- ngStyle -->
+<div [ngStyle]="{'background-color': bgColor, 'color': 'red'}">Yet another div</div>
+
+<!-- *ngFor -->
+<ul>
+    <li *ngFor="let name of studentNames">{{ name }}</li>
+</ul>
+
+<!-- *ngIf -->
+<div *ngIf="hasError">Email is required</div>
+
+
+<div *ngIf="hasError; else elseContainer">Name is required</div>
+<ng-template #elseContainer>There are no errors.</ng-template>
+
+<!-- ngSwitch -->
+<ul [ngSwitch]="currentTab">
+    <li *ngSwitchCase="1">Tab 1</li>
+    <li *ngSwitchCase="2">Tab 2</li>
+    <li *ngSwitchCase="3">Tab 3</li>
+    <li *ngSwitchDefault>Tab 4</li>
+</ul>
+
+<!-- Custom directive -->
+<div appCustom>Example of custom directive</div> 
+<div appCustom>
+    <p>Another example</p>
+</div>

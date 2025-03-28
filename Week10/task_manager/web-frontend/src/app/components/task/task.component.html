@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header bg-success text-white">
+    <h4 class="card-title">{{ task.title }}</h4>
+  </div>
+  <div class="card-body bg-primary text-white">
+    <p>{{ task.description }}</p>
+    <hr />
+    <h3>{{ task.task_date | date:'d-M-YYY H:m' }}</h3>
+    <hr />
+    <h3>{{ task.priority_level }}</h3>
+    <hr />
+    <h3>{{ task.category }}</h3>
+    <hr />
+    <h2>{{ task.progress_level }}</h2>
+    <hr />
+  </div>
+</div>
