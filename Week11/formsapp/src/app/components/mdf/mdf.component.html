@@ -1,0 +1,21 @@
+<form [formGroup]="userForm">
+
+    <p>
+        <label>Name</label>
+        <input type="text" formControlName="name" placeholder="Please enter your name"> {{ nameFormControl.valid | json }}
+    </p>
+
+    <p>
+        <label>Email</label>
+        <input type="email" formControlName="email">
+    </p>
+
+    <p>
+        <label>Phone Number</label>
+        <input type="number" formControlName="phone">
+    </p>
+
+    <button type="button" (click)="onSubmit()">Submit</button>
+
+</form>
+    
