@@ -2,20 +2,44 @@
 
     <p>
         <label>Name</label>
-        <input type="text" formControlName="name" placeholder="Please enter your name"> {{ nameFormControl.valid | json }}
+        <input type="text" formControlName="name" placeholder="Please enter your name"> 
+
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            The name field is required.
+        </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            The name field must be at least 3 characters.
+        </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']">
+            The name field contains an illegal value.
+        </span>
     </p>
 
     <p>
         <label>Email</label>
         <input type="email" formControlName="email">
+
+        <span *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+            The email field is required.
+        </span>
+
+        <span *ngIf="emailFormControl.dirty && emailFormControl.errors?.['email']">
+            The email field must be a valid email address.
+        </span>
     </p>
 
     <p>
         <label>Phone Number</label>
         <input type="number" formControlName="phone">
+
+        <span *ngIf="phoneFormControl.touched && phoneFormControl.errors?.['required']">
+            The phone number field is required.
+        </span>
     </p>
 
-    <button type="button" (click)="onSubmit()">Submit</button>
+    <button type="button" (click)="onSubmit()" [disabled]="userForm.invalid">Submit</button>
 
 </form>
     
