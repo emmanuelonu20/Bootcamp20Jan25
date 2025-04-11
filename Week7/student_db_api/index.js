@@ -3,8 +3,12 @@ const app = express();
 const db_config = require('./db_config');
 const Student = require('./models/student');
 const Department = require('./models/department');
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 db_config.authenticate().then(() => {
     console.log('Database is connected');
@@ -45,7 +49,11 @@ app.get('/students', function(req, res){
 app.get('/students/:student_id', function(req, res){
     const student_id = parseInt(req.params.student_id);
 
-    Student.findByPk(student_id).then((result) => {
+    const sql_data = {
+        include: [Department]
+    };
+
+    Student.findByPk(student_id, sql_data).then((result) => {
         if (result){
             res.status(200).send(result);
         } else {

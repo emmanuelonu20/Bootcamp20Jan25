@@ -1,5 +1,3 @@
-<ul>
-    <li *ngFor="let student_data of students">
-        <app-student-item [student]="student_data" (deleteStudentEvent)="deleteStudent($event)"></app-student-item>
-    </li>
-</ul>
+<div *ngFor="let student_data of students" class="mb-4">
+    <app-student-item [student]="student_data" (deleteStudentEvent)="deleteStudent($event)"></app-student-item>
+</div>

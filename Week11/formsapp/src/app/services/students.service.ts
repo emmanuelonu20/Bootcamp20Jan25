@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Istudent } from '../interfaces/istudent';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentsService {
 
-  private students: Istudent[] = [
-    {id: 1, name: 'John Wick', department: 'Computer Science', age: 23},
-    {id: 2, name: 'Sandra Bullock', department: 'Music', age: 30},
-    {id: 3, name: 'Peter Pan', department: 'Economics', age: 20},
-  ];
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   //getting data of all students
   getAllStudents() {
-    return this.students;
+    return this.http.get<Istudent[]>('http://localhost:3000/students');
   }
 
   //getting data of a single student based on the student ID
   getSingleStudent(id: number) {
-    return this.students.find(stud => stud.id === id);
+    return this.http.get<Istudent>('http://localhost:3000/students/' + id);
+  }
+
+  createStudent(formData: any){
+    return this.http.post<Istudent>('http://localhost:3000/students', formData);
+  }
+
+  removeStudent(id: number) {
+    return this.http.delete<Istudent>('http://localhost:3000/students/' + id);
   }
 }

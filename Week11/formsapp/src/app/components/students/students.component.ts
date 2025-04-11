@@ -17,15 +17,24 @@ export class StudentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.students = this.studentService.getAllStudents();
+   this.studentService.getAllStudents().subscribe(result => {
+    this.students = result;
+   });
   }  
 
   deleteStudent(studentId: number) {
-    //get the array index of the student
-    let index = this.students.findIndex(stud => stud.id === studentId);
+    if (confirm('Are you sure you want to delete this student?')) {
+      //get the array index of the student
+      let index = this.students.findIndex(stud => stud.id === studentId);
 
-    //delete student from array
-    this.students.splice(index, 1);
+      //delete student from array
+      this.students.splice(index, 1);
+
+      //Delete student from Database
+      this.studentService.removeStudent(studentId).subscribe(result => {
+        console.log('Student was deleted successfully');
+      });
+    }
   }
 
 }

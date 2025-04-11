@@ -1,4 +1,6 @@
-<p>ID: {{ student.id }}</p>
-<p>Name: {{ student.name }}</p>
-<p>Department: {{ student.department }}</p>
-<p>Age: {{ student.age }}</p>
+<div *ngIf="student">
+    <p>ID: {{ student.id }}</p>
+    <p>Name: {{ student.name }}</p>
+    <p>Department: {{ student.department.title }}</p>
+    <p>Age: {{ student.age }}</p>
+</div>

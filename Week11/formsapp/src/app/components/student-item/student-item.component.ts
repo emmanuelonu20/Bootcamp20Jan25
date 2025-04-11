@@ -11,7 +11,7 @@ export class StudentItemComponent implements OnChanges {
 
   //properties
   @Input() student!: Istudent;
-  @Output() deleteStudentEvent = new EventEmitter();
+  @Output() deleteStudentEvent = new EventEmitter(); //custom event
 
   //methods
   ngOnChanges(changes: SimpleChanges): void {

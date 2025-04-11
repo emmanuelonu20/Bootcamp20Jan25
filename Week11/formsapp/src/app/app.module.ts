@@ -10,6 +10,8 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 import { StudentItemComponent } from './components/student-item/student-item.component';
+import { provideHttpClient } from '@angular/common/http';
+import { StudentFormComponent } from './components/student-form/student-form.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +21,16 @@ import { StudentItemComponent } from './components/student-item/student-item.com
     TeachersComponent,
     NotFoundComponent,
     StudentDetailsComponent,
-    StudentItemComponent
+    StudentItemComponent,
+    StudentFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

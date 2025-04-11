@@ -5,6 +5,7 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { MdfComponent } from './components/mdf/mdf.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
+import { StudentFormComponent } from './components/student-form/student-form.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'mdf', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'student-details/:student_id', component: StudentDetailsComponent},
   {path: 'teachers', component: TeachersComponent},
   {path: 'mdf', component: MdfComponent},
+  {path: 'create-student', component: StudentFormComponent},
   {path: '**', component: NotFoundComponent}
 ];
 
