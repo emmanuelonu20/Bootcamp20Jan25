@@ -15,7 +15,7 @@ export class StudentsService {
   }
 
   //getting data of a single student based on the student ID
-  getSingleStudent(id: number) {
+  getSingleStudent(id: number){
     return this.http.get<Istudent>('http://localhost:3000/students/' + id);
   }
 
@@ -25,5 +25,9 @@ export class StudentsService {
 
   removeStudent(id: number) {
     return this.http.delete<Istudent>('http://localhost:3000/students/' + id);
+  }
+
+  updateStudent(id: number, formData: any) {
+    return this.http.patch<Istudent>('http://localhost:3000/students/' + id, formData);
   }
 }

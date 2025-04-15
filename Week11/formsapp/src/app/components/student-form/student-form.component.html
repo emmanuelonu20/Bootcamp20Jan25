@@ -1,3 +1,8 @@
+<h2 *ngIf="isEdit; else createTitle">Edit Student</h2>
+<ng-template #createTitle>
+    <h2>Create Student</h2>
+</ng-template>
+
 <div class="row">
     <div class="col-5">
         <form [formGroup]="studentForm">
@@ -9,7 +14,11 @@
 
             <div class="mb-3">
                 <label class="form-label">Department ID</label>
-                <input type="number" class="form-control" formControlName="department_id">
+
+                <select class="form-select" formControlName="department_id">
+                    <option value="0">Select a department</option>
+                    <option *ngFor="let dept of departments" [value]="dept.id">{{ dept.title }}</option>
+                </select>
             </div>
 
             <div class="mb-3">

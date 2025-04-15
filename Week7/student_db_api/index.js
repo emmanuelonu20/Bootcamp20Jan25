@@ -118,6 +118,14 @@ app.delete('/students/:student_id', function(req, res){
     });
 });
 
+app.get('/departments', function(req, res){
+    Department.findAll().then(result => {
+        res.status(200).send(result);
+    }).catch(err => {
+        res.status(500).send(err);
+    });
+});
+
 
 app.listen(3000, function(){
     console.log('Server running on port 3000...');

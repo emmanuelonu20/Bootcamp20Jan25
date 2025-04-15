@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'teachers', component: TeachersComponent},
   {path: 'mdf', component: MdfComponent},
   {path: 'create-student', component: StudentFormComponent},
+  {path: 'edit-student/:student_id', component: StudentFormComponent},
   {path: '**', component: NotFoundComponent}
 ];
 
