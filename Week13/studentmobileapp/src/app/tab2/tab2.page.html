@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      All Students
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngFor="let student_data of students" class="mb-4">
+    <app-student-item [student]="student_data" (deleteStudentEvent)="deleteStudent($event)"></app-student-item>
+  </div>
+
+</ion-content>

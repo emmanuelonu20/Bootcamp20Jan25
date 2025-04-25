@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Welcome to my mobile app</h1>
+
+  <a routerLink="/about">About Page</a>
+
+  <ion-button (click)="goToAbout()">Code page navigation</ion-button>
+</ion-content>

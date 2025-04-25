@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="First Name" placeholder="Enter text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input label="Last Name" labelPlacement="fixed" placeholder="Enter text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" label="Address" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="number" label="Bio" labelPlacement="floating" placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Hobbies" placeholder="Favorite Fruit">
+        <ion-select-option value="apple">Jumping</ion-select-option>
+        <ion-select-option value="banana">Running</ion-select-option>
+        <ion-select-option value="orange">Dancing</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button id="ddd">Click Me</ion-button>
+  <ion-alert
+    trigger="ddd"
+    header="Error"
+    message="Could not find product."
+    [buttons]="alertButtons"
+  ></ion-alert>
+
+  <ion-button (click)="presentAlert()">Open via controller</ion-button>
+
+
+  <ion-button id="open-toast" expand="block">Open Toast</ion-button>
+  <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" position="top" [duration]="10000"></ion-toast>
+
+
+  <ion-button expand="block" (click)="presentToast('top')">Present Toast At the Top</ion-button>
+<ion-button expand="block" (click)="presentToast('middle')">Present Toast At the Middle</ion-button>
+<ion-button expand="block" (click)="presentToast('bottom')">Present Toast At the Bottom</ion-button>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-md="4">1</ion-col>
+    <ion-col size="12" size-md="4">2</ion-col>
+    <ion-col size="12" size-md="4">3</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

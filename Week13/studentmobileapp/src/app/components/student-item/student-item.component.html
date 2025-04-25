@@ -1,0 +1,10 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ student.name }}</ion-card-title>
+  </ion-card-header>
+
+
+  <ion-button [routerLink]="['/student-details', student.id]">View</ion-button>
+  <ion-button (click)="onDelete()" color="danger">Delete</ion-button>
+  <ion-button [routerLink]="['/tabs/edit-student', student.id]" color="success">Edit</ion-button>
+</ion-card>
