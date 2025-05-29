@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.title }}</td>
+        <td>{{ transaction.description }}</td>
+        <td>{{ transaction.type }}</td>
+      </tr>
+    </tbody>
+  </table>

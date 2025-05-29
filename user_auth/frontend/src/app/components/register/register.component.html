@@ -1,0 +1,23 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" formControlName="first_name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-control" formControlName="last_name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Profile Image</label>
+        <input class="form-control" type="file" (change)="onFileSelected($event)" accept="image/png, image/jpeg">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+</form>
